@@ -1,4 +1,4 @@
-/*
+/*TEST*/
 data "aws_ami" "app_ami" {
   most_recent = true
 
@@ -14,15 +14,14 @@ data "aws_ami" "app_ami" {
 
   owners = ["979382823631"] # Bitnami
 }
-*/
 
 data "aws_vpc" "default" {
   default = true
 }
 
 resource "aws_instance" "web" {
-  #ami  = data.aws_ami.app_ami.id
-  ami = "ami-0332d564d76dbd8d6"
+  ami  = data.aws_ami.app_ami.id
+  #ami = "ami-0332d564d76dbd8d6"
   instance_type = var.instance_type
 
   vpc_security_group_ids = [aws_security_group.web.id]
