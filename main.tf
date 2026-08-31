@@ -17,7 +17,7 @@ data "aws_ami" "app_ami" {
 */
 
 data "aws_vpc" "default" {
-  default = true;
+  default = true
 }
 
 resource "aws_instance" "web" {
