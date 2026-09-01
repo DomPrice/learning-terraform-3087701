@@ -23,7 +23,7 @@ data "aws_vpc" "default" {
 
 resource "aws_instance" "web" {
   #ami  = data.aws_ami.app_ami.id
-  ami = "ami-020e59ce535d68bc1"
+  ami = "ami-081b0a6eac00b4f53"
   instance_type = var.instance_type
 
   vpc_security_group_ids = [aws_security_group.web.id]
