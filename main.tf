@@ -16,10 +16,6 @@ data "aws_ami" "app_ami" {
 }
 */
 
-provider "aws" {
-  region = "us-east-1"
-}
-
 data "aws_vpc" "default" {
   default = true
 }
